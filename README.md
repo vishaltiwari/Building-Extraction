@@ -73,3 +73,8 @@ After obtaining the skeleton of the road we do a region growth operation, and li
 As the final step we mask out the above area and from the segmented image and get the final result as shown below. The area shown in grey is the area that is classified as buildings.
 
 ![Final Result](https://i.imgur.com/SwuuSFJ.png)
+
+## Conclusion
+
+There are several shortcomings in the first method which we have used. First of all, even though we applied vegetation masking it only removed the fields and gardens but the trees are still not accounted for. Thats why our final image has trees in it also marked as buildings. Secondly, if in the aerial image has the colour of the building very similar to the roads then the output is very erroneous. This is because we haven’t applied a method to filter out the road from the image.
+Second method is based on masking out the different area corresponding to vegetation, shadow and road. It overcomes the problems of faced by the first method, and works for most of the images we have tested on.
